@@ -1,0 +1,295 @@
+﻿<Window x:Class="WindMeter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindMeter"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="智能移动船舶气象站"  Height="900" Width="1600">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--This Grid is to show the first conent, which include information and buttons at the top-->
+        <Grid Grid.Row="0" Background="#555">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="White" BorderThickness="2">
+                
+               <!--the first Infomation Box--> 
+                
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="智能移动船舶气象站" FontSize="20" TextAlignment="Center" FontWeight="Bold" Foreground="#fff" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="型号:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                    <TextBox  Name="ModelName" Text="How are you" Grid.Column="1" FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="制造:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                    <TextBox Name="Manufacter" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="编号:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="SerialNumber" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="生产日期:" FontSize="19" TextAlignment="Left" Margin="10 0 10 10" Foreground="#fff"/>
+                        <TextBox Name="ProductDate" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            
+            
+             <!-- the second infomation box-->
+
+            <Border BorderBrush="White" BorderThickness="2" Grid.Column="1">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="船名:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox  Name="ShipName" Text="How are you" Grid.Column="1" FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="MMSI:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="MMSI_Text" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="IMO:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="IMO_Text" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="纬度:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="latitude" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="经度:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="Longtitude" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- the Third infomation box-->
+
+            <Border BorderBrush="White" BorderThickness="2" Grid.Column="2">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="日期:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox  Name="Today_Date" Text="How are you" Grid.Column="1" FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="对地航向:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="Target_Land_direction" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="对地航速:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="Target_Land_speed" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="罗经值:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="HDT_Text" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="气温:" FontSize="19" TextAlignment="Left" Margin="10 0 10 0" Foreground="#fff"/>
+                        <TextBox Name="Temperature_Text" Text="How are you" Grid.Column="1"  FontSize="19" TextAlignment="Center" Foreground="#fff" Background="Transparent" BorderThickness="0"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- the Fourth infomation box which is to show the picture for winspeed-->
+
+            <Border BorderBrush="White" BorderThickness="2" Grid.Column="3">
+                <Image  OpacityMask="White">
+                    
+                </Image>
+            </Border>
+
+            <!-- the Fifth infomation box which is to show the page and buttons-->
+            <Border BorderBrush="White" BorderThickness="2" Grid.Column="4">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Name="Next_Button" Content="向后" Grid.Column="0" Margin="10" FontSize="20"/>
+                    <TextBox Name="Page_Status" Text="Page1" Grid.Column="1" Margin="10" FontSize="30" IsReadOnly="True" TextAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button Name="Pre_Button" Content="向前" Grid.Column="2" Margin="10" FontSize="20"/>
+                </Grid>
+            </Border>
+
+        </Grid >
+
+        <!--This Start the MainPage, Show Graph and Results in a Tab Control-->
+        <TabControl Grid.Row="1" Background="#FF1C8899" >
+            
+            <!--First Page to show both Winspeed and WinDirection-->
+            <TabItem Name="MainPage" TabIndex="0" Visibility="Collapsed">
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+
+                        <!--
+                        <Ellipse Grid.Column="0" Fill="#FF16163E" Height="500" Width="500"/>
+                        <Ellipse Grid.Column="0" Fill="Blue" Height="450" Width="450"/>
+                        
+                        <Ellipse Grid.Column="1" Fill="#FF16163E" Height="500" Width="500"/>
+                        <Ellipse Grid.Column="1" Fill="Blue" Height="450" Width="450"/>
+                        -->
+                    </Grid>
+                    <!--这里用于MainPage最下面一排显示，一共七个控件，等距离-->
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    <!--一个TextBlock与一个TextBox组合为一个显示控件-->
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="温度" FontSize="30" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBox  Name="MainPage_Temp" Padding="3" Width="150" FontSize="40" Foreground="White" Text="Index" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="气压" FontSize="30" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBox  Name="MainPage_AirPresure" Padding="3" Width="150" FontSize="40" Foreground="White" Text="Index" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="相对湿度" FontSize="30" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBox  Name="MainPage_Humidity" Padding="3" Width="150" FontSize="40" Foreground="White" Text="Index" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="3">
+                            <TextBlock Text="相对风速" FontSize="30" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBox  Name="MainPage_WindSpeed" Padding="3" Width="150" FontSize="40" Foreground="White" Text="Index" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="4">
+                            <TextBlock Text="相对风向" FontSize="30" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBox  Name="MainPage_WindDirection" Padding="3" Width="150" FontSize="40" Foreground="White" Text="Index" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="5">
+                            <TextBlock Text="能见度" FontSize="30" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBox  Name="MainPage_Visibility" Padding="3" Width="150" FontSize="40" Foreground="White" Text="Index" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="6">
+                            <TextBlock Text="雨量" FontSize="30" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBox  Name="MainPage_RainFall" Padding="3" Width="150" FontSize="40" Foreground="White" Text="Index" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                        </StackPanel>
+                    </Grid>
+                 
+                </Grid>
+            </TabItem>
+            <TabItem Name="NorthPage" TabIndex="1" Visibility="Collapsed">
+            </TabItem>
+            <TabItem Name="HeadingPage" TabIndex="2" Visibility="Collapsed"/>
+            <TabItem Name="SailingPage" TabIndex="3" Visibility="Collapsed"/>
+            <TabItem Name="SettingPage" TabIndex="4" Visibility="Collapsed"/>
+        </TabControl>
+    </Grid>
+</Window>
