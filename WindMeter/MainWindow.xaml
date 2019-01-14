@@ -225,8 +225,8 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        
 
+                        <Button></Button>
           
                         <Ellipse Grid.Column="0" Fill="#FF16163E" Height="500" Width="500"/>
                         <Ellipse Grid.Column="0" Fill="Blue" Height="450" Width="450"/>
