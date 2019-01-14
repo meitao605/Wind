@@ -29,8 +29,6 @@ namespace WindMeter
         {
             Canvas.SetLeft(Left_Out_Circle, left_meter.ActualWidth / 2-250);
             Canvas.SetTop(Left_Out_Circle, left_meter.ActualHeight / 2 - 250);
-            Canvas.SetLeft(Left_in_Circle, left_meter.ActualWidth / 2 - 225);
-            Canvas.SetTop(Left_in_Circle, left_meter.ActualHeight / 2 - 225);
 
         }
 
@@ -38,8 +36,16 @@ namespace WindMeter
         {
             Canvas.SetLeft(Left_Out_Circle, left_meter.ActualWidth / 2 - 250);
             Canvas.SetTop(Left_Out_Circle, left_meter.ActualHeight / 2 - 250);
-            Canvas.SetLeft(Left_in_Circle, left_meter.ActualWidth / 2 - 225);
-            Canvas.SetTop(Left_in_Circle, left_meter.ActualHeight / 2 - 225);
+            DrawScale();
+
+        }
+
+        private void DrawScale()
+        {
+            double CenterX = left_meter.ActualWidth / 2;
+            double CenterY = left_meter.ActualHeight / 2;
+
+
         }
     }
 }
