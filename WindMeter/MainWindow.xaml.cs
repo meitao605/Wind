@@ -27,11 +27,19 @@ namespace WindMeter
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-
+            Canvas.SetLeft(Left_Out_Circle, left_meter.ActualWidth / 2-250);
+            Canvas.SetTop(Left_Out_Circle, left_meter.ActualHeight / 2 - 250);
+            Canvas.SetLeft(Left_in_Circle, left_meter.ActualWidth / 2 - 225);
+            Canvas.SetTop(Left_in_Circle, left_meter.ActualHeight / 2 - 225);
 
         }
 
-
+        private void Left_meter_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            Canvas.SetLeft(Left_Out_Circle, left_meter.ActualWidth / 2 - 250);
+            Canvas.SetTop(Left_Out_Circle, left_meter.ActualHeight / 2 - 250);
+            Canvas.SetLeft(Left_in_Circle, left_meter.ActualWidth / 2 - 225);
+            Canvas.SetTop(Left_in_Circle, left_meter.ActualHeight / 2 - 225);
+        }
     }
 }

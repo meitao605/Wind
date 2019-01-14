@@ -225,12 +225,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-
-                        <Button></Button>
-          
-                        <Ellipse Grid.Column="0" Fill="#FF16163E" Height="500" Width="500"/>
-                        <Ellipse Grid.Column="0" Fill="Blue" Height="450" Width="450"/>
-                        
+                        <Canvas Grid.Column="0" Name="left_meter" SizeChanged="Left_meter_SizeChanged">
+                            <Ellipse x:Name="Left_Out_Circle" Fill="#FF16163E" Height="500" Width="500"/>
+                            <Ellipse x:Name="Left_in_Circle" Fill="Blue" Height="450" Width="450"/>
+                            <!--<Line X1="0" Y1="0" X2="200" Y2="200" Fill="Black" Stroke="White"/>-->
+                        </Canvas>
+             
                         <Ellipse Grid.Column="1" Fill="#FF16163E" Height="500" Width="500"/>
                         <Ellipse Grid.Column="1" Fill="Blue" Height="450" Width="450"/>
 
