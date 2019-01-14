@@ -227,13 +227,13 @@
                         </Grid.ColumnDefinitions>
                         
 
-                        <!--
+          
                         <Ellipse Grid.Column="0" Fill="#FF16163E" Height="500" Width="500"/>
                         <Ellipse Grid.Column="0" Fill="Blue" Height="450" Width="450"/>
                         
                         <Ellipse Grid.Column="1" Fill="#FF16163E" Height="500" Width="500"/>
                         <Ellipse Grid.Column="1" Fill="Blue" Height="450" Width="450"/>
-                        -->
+
                     </Grid>
                     <!--这里用于MainPage最下面一排显示，一共七个控件，等距离-->
                     <Grid Grid.Row="1">
