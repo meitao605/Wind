@@ -20,6 +20,7 @@ namespace WindMeter
     /// </summary>
     public partial class MainWindow : Window
     {
+        static private double Radial = 250;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,25 +28,13 @@ namespace WindMeter
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Canvas.SetLeft(Left_Out_Circle, left_meter.ActualWidth / 2-250);
-            Canvas.SetTop(Left_Out_Circle, left_meter.ActualHeight / 2 - 250);
+            Trans_30.X = (Radial + 15*Math.Sin(Math.PI/6))* Math.Sin(Math.PI/6);
+            Trans_30.Y = 250 - (Radial + 15 * Math.Sin(Math.PI / 6))* Math.Cos(Math.PI/6);
 
+            Trans_60.X = (Radial + 15 * Math.Sin(Math.PI / 3)) * Math.Sin(Math.PI / 3);
+            Trans_60.Y = 250 - (Radial + 15 * Math.Sin(Math.PI / 3)) * Math.Cos(Math.PI / 3);
         }
 
-        private void Left_meter_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            Canvas.SetLeft(Left_Out_Circle, left_meter.ActualWidth / 2 - 250);
-            Canvas.SetTop(Left_Out_Circle, left_meter.ActualHeight / 2 - 250);
-            DrawScale();
 
-        }
-
-        private void DrawScale()
-        {
-            double CenterX = left_meter.ActualWidth / 2;
-            double CenterY = left_meter.ActualHeight / 2;
-
-
-        }
     }
 }
